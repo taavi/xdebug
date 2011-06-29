@@ -25,8 +25,8 @@
 
 typedef struct xdebug_coverage_line {
 	int lineno;
-	int count;
-	int executable;
+	int count:30;
+	unsigned int executable:2;
 } xdebug_coverage_line;
 
 typedef struct xdebug_coverage_file {
